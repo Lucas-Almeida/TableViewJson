@@ -9,10 +9,10 @@
 import Foundation
 
 struct JsonModel: Decodable {
-    var id: String
+    var id: String?
     var text: String
     var create_date: String
-    var update_date: String
+    var update_date: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"

@@ -15,6 +15,7 @@
 		EBCF021721BED89B0085C8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBCF021521BED89B0085C8A7 /* LaunchScreen.storyboard */; };
 		EBCF021F21BED8EB0085C8A7 /* JsonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF021E21BED8EB0085C8A7 /* JsonTableViewCell.swift */; };
 		EBCF022121BEDB1B0085C8A7 /* JsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF022021BEDB1B0085C8A7 /* JsonModel.swift */; };
+		EBCF022921BEFF950085C8A7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF022821BEFF950085C8A7 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EBCF021821BED89B0085C8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBCF021E21BED8EB0085C8A7 /* JsonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonTableViewCell.swift; sourceTree = "<group>"; };
 		EBCF022021BEDB1B0085C8A7 /* JsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModel.swift; sourceTree = "<group>"; };
+		EBCF022821BEFF950085C8A7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				EBCF020921BED89A0085C8A7 /* AppDelegate.swift */,
 				EBCF020B21BED89A0085C8A7 /* ViewController.swift */,
+				EBCF022821BEFF950085C8A7 /* SecondViewController.swift */,
 				EBCF022021BEDB1B0085C8A7 /* JsonModel.swift */,
 				EBCF020D21BED89A0085C8A7 /* Main.storyboard */,
 				EBCF021E21BED8EB0085C8A7 /* JsonTableViewCell.swift */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCF022921BEFF950085C8A7 /* SecondViewController.swift in Sources */,
 				EBCF022121BEDB1B0085C8A7 /* JsonModel.swift in Sources */,
 				EBCF020C21BED89A0085C8A7 /* ViewController.swift in Sources */,
 				EBCF020A21BED89A0085C8A7 /* AppDelegate.swift in Sources */,

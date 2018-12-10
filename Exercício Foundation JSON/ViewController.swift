@@ -8,8 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SecondViewControllerDelegate {
+    func register(_ controller: SecondViewController, didRegisterText text: String, didRegisterHour hour: String) {
+        
+//        var json = JsonModel(from: Decoder as! Decoder)
+//        jsonEntry.text = text
+//        jsonEntry.create_date = hour
+    }
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func addEntry(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "add", sender: sender)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "add", let navigation = segue.destination as? UINavigationController, let controller = navigation.topViewController as? SecondViewController {
+//            controller.delegate = self
+//        }
+        
+    }
     
     var jsonArray = [JsonModel]()
     override func viewDidLoad() {
@@ -50,6 +67,8 @@ class ViewController: UIViewController {
         }
         task.resume()
     }
+    
+
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -61,8 +80,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jsonCell", for: indexPath) as! JsonTableViewCell
         
         let arrayCell = jsonArray[indexPath.row]
+        
+        let hourMinute = arrayCell.create_date.index(
+            arrayCell.create_date.startIndex, offsetBy: 11)..<arrayCell.create_date.index(arrayCell.create_date.endIndex, offsetBy: -8)
+        let result = arrayCell.create_date[hourMinute]
+        
         cell.jsonText.text = arrayCell.text
-        cell.created_date.text = arrayCell.create_date
+        cell.created_date.text = String(result)
         
         return cell
     }
@@ -78,3 +102,4 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
+
